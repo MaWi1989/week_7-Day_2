@@ -119,14 +119,44 @@ isBigWord('platypus')
 
 
 
-//Codewars Problem 1:
+
+
+//Codewars Problem 1: FIXME: Replace all dots
+//The code provided is supposed to replace all the dots . in the specified String str with dashes -
+//But it's not working properly.
+
+//Task
+//Fix the bug so we can all go home early.
+
+//Notes
+//String str will never be null.
+
+
+
+var replaceDots = function(str) {
+    let new_str = str.replace(/\./g, '-') 
+    return new_str    
+}
+
+console.log(replaceDots('one.two.three'))
 
 
 
 
+//Codewars Problem 2: Removing Elements
+//Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+//Example:
+//["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+//None of the arrays will be empty, so you don't have to worry about that!
 
 
+function removeEveryOther(arr){
+    for (let i = 1; i < arr.length; i += 1){
+      arr.splice(i, 1)
+    }
+    return arr
+  }
 
-//Codewars Problem 2: 
-
-
+  console.log(removeEveryOther(["Keep", "Remove", "Keep", "Remove", "Keep", "remove", 'keep']))
